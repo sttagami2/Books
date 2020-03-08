@@ -16,5 +16,11 @@
 <%# form_for %>
 </section>
 <div>
-  Show|Back
+  <p>
+    <span><%= link_to "Show", book_path(@books) %></span>
+    <%# @booksはコントローラから送られてきた情報が格納されている！ %>
+    |
+    <span><%= link_to "Back", '/books' %></span>
+    <%# link_toの記述の仕方はいくつかある！ → 分からなくなったらlink_toで検索！ %>
+  </p>
 </div>
