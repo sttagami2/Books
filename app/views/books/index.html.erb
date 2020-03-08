@@ -1,3 +1,45 @@
 <header>
   <h1 class="headline">Books</h1>
 </header>
+
+<main>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th><%= link_to "Show",  %></th>
+      <th><%= link_to "Edit", :edit_book_path(@book.id) %></th>
+      <th><%= link_to "Destroy", destroy_book_paty(@list.id), method: :deleate, "data-confirm" => "Are you sure?" %></th>
+    </tr>
+
+    <%# ループさせる部分 %>
+    <tr>
+      <td>お腹が空いた</td>
+      <td>お腹が空いたら、焼きおにぎり</td>
+      <td>Show</td>
+      <td>Edit</td>
+      <td>Destroy</td>
+    </tr>
+    <%# ループさせる部分 %>
+  </table>
+
+  <%# 投稿部分 %>
+  <section>
+    <h2>New book</h2>
+    
+    <%= form_for(@book) do |f| %>
+      <p>Title</p>
+      <%= f.text_field :title %>
+
+      <p>Body</p>
+      <%= f.text_area :body %>
+
+      <%= f.submit 'Create' %>
+    <% end %>
+  </section>
+
+
+  <%# 投稿部分 %>
+
+
+</main>
