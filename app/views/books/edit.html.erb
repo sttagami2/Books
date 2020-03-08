@@ -1,15 +1,20 @@
 <section>
   <h2>Editing Book</h2>
 
-  <p>title</p>
-  <%# title情報が反映されている入力フォームを下に作成 %>
+<%# form_for %>
+  <%= form_for(@books) do |f| %>
+    <p>title</p>
+    <%= f.text_field :title %>
+    <%# title情報が反映されている入力フォームを下に作成 %>
 
-  <p>Body</p>
-  <%# body情報が反映されている入力フォームを下に作成 %>
+    <p>Body</p>
+    <%= f.text_area :body %>
+    <%# body情報が反映されている入力フォームを下に作成 %>
 
-  <div>Update Book</div>
+    <%= f.submit 'Create Book' %>
+  <% end %>
+<%# form_for %>
 </section>
-
 <div>
-  <a href="show.html">Show</a>|<a href="index.html">Back</a>
+  Show|Back
 </div>
