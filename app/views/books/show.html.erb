@@ -8,6 +8,13 @@
   </div>
 
   <div>
-  <a href="edit.html">Edit</a>|<a href="index.html">Back</a>
+    <p>
+      <span><%= link_to "Edit", edit_book_path(@book) %></span>
+      <%# @bookはコントローラから送られてきた情報が格納されている！ %>
+      |
+      <span><%= link_to "Back", '/books' %></span>
+      <%# link_toの記述の仕方はいくつかある！ → 分からなくなったらlink_toで検索！ %>
+
+    </p>
   </div>
 </div>
