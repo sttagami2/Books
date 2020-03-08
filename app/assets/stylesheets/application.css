@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: verdana, arial,helvetica, sans-serif;
+}
+
+ body {
+   margin: 33px;
+ }
+
+ p, td {
+   font-size: 13px;
+   line-height: 18px;
+ }
+
+ a {
+   display: block;
+   color: black;
+ }
+
+ a:hover {
+   background-color: black;
+   color: white;
+ }
+
+ table {
+   border-collapse: separate;
+   border-spacing: 2px;
+   border-color: gray;
+ }
+
+ td {
+   padding: 0 5px 7px 5px;
+ }
+
+ .block {
+   display: inline-block;
+ }
+ 
+
+
+
+
+
