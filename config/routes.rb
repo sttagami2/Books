@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
   post 'books' => 'books#create'
 
+  get 'books/:id' => 'books#show'      # データベースに保存されているidを取得し、該当するidをshowに送る
+  get 'books/:id' => 'books#edit'      # データベースに保存されているidを取得し、該当するidをeditに送る
+  patch 'books/:id' => 'books#update', as: 'update_book'
+
 end
 
