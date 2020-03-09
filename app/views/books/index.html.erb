@@ -32,8 +32,15 @@
 
   <%# form_for %>
   <%= form_for(@book, url: '/books') do |f| %>
-
-    <p>Title</p>    
+    <% if @book.errors.any? %>
+      <h3><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <p>Title</p>
     <%= f.text_field :title %>
     <%# 入力フォームを作成 %>
 
