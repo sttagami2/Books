@@ -10,12 +10,11 @@ class BooksController < ApplicationController
 
   # ・ユーザーが新たに本の題名と内容を保存する時のアクション
   def create
-    book = Book.new(book_params)
-    if book.save
+    @book = Book.new(book_params)
+    if @book.save
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(book.id)        # Show.htmlの画面に移行
     else
-      @book = Book.new
       @books = Book.all   
       render :index                         # renderはコントローラを介さずにViewへデータを返す → 返すデータをrender前に定義すること！
     end
