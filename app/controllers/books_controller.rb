@@ -26,9 +26,9 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  # def new
+  def new
 
-  # end
+  end
 
   # ・データベースに保存されている各データを編集するためのページ
   def edit
