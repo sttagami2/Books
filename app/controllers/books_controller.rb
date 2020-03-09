@@ -13,7 +13,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
-      redirect_to book_path(book.id)        # Show.htmlの画面に移行
+      redirect_to book_path(@book.id)        # Show.htmlの画面に移行
     else
       @books = Book.all   
       render :index                         # renderはコントローラを介さずにViewへデータを返す → 返すデータをrender前に定義すること！
